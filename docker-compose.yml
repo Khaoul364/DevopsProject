@@ -6,8 +6,7 @@ services:
     image: jenkins/jenkins
     container_name: jenkins
     ports:
-     - 8080:8080
-     - 5000:5000
+     - 8080 8080
     volumes:
       - /home/jenkins/jenkins_home:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
