@@ -3,7 +3,7 @@ version: "3"
 services:
   jenkins:
     user: jenkins      
-    image: jenkins/jenkins:lts
+    image: jenkins/jenkins
     container_name: jenkins
     ports:
      - 8080:8080
