@@ -44,8 +44,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
         </dependency>
-
-
+     <distributionManagement>
+        <repository>
+            <id>deploymentRepo</id>
+            <url>http://180.15.1.2:8081/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
         <dependency>
             <groupId>org.modelmapper</groupId>
             <artifactId>modelmapper</artifactId>
