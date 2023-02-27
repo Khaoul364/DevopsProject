@@ -24,7 +24,7 @@ pipeline {
                 sh "sudo docker build -t kaddemimage ."
             }
         }
-         stage("Sonar") {
+         /* stage("Sonar") {
          steps {
                 sh "mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=rym"
              }
@@ -33,24 +33,24 @@ pipeline {
          steps {
             sh 'mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=rym'
             }
-        }
+        } */
 }
 
-  /*stage("Nexus") {
+  stage("Nexus") {
             steps {
                 sh "mvn deploy -DskipTests"
             }
-        }*/
-               /* stage("Deploy Artifact to private registry") {
+        }
+                stage("Deploy Artifact to private registry") {
             steps {
                 sh 'docker run  -p 9090:9090--network mynetwork --name -d spring-container spring1-image'
             }
         }
-stage("Deploy Dokcer Image to private registry") {
+  stage("Deploy Dokcer Image to private registry") {
             steps {
                 sh "..............."
             }
-        }*/
+        }
             post {
         always {
             cleanWs()
