@@ -34,7 +34,7 @@ pipeline {
             sh 'mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=rym'
             }
         } */
-}
+
 
   stage("Nexus") {
             steps {
@@ -46,10 +46,11 @@ pipeline {
                 sh 'docker run  -p 9090:9090--network mynetwork --name -d spring-container spring1-image'
             }
         }
-  stage("Deploy Dokcer Image to private registry") {
+  /* stage("Deploy Dokcer Image to private registry") {
             steps {
                 sh "..............."
             }
+        } */
         }
             post {
         always {
@@ -57,3 +58,4 @@ pipeline {
         }
     }
 }
+
